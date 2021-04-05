@@ -53,3 +53,23 @@ htmlOptions.addEventListener("click", (e)=>{
         nextQuestion(index);
     }
 })
+
+const nextQuestion = (index) => {
+    let quizDiv = document.querySelectorAll(".quiz-option");
+    QandA.splice(index, 1);
+    if(QandA.length !== 0){
+        randomNumber = Math.floor(Math.random() * QandA.length);
+        questionSet = QandA[randomNumber];
+        question = questionSet.question;
+        allOptions = questionSet.options.allOptions;
+        correct = questionSet.options.correctOption;
+        htmlQuestion.innerHTML = question;
+        for(let i = 0; i < quizDiv.length; i++){
+            quizDiv[i].innerHTML = allOptions[i];
+        }
+    } else {
+        codingQuestions.style.display = "none";
+        yourScore.innerHTML = `Your score is ${secondsLeft - 1}!`;
+        submitScore.style.display = "flex";
+    }
+}
