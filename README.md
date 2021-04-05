@@ -9,6 +9,7 @@ In this little quiz you'll test  your knowledge in hockey. You'll have to answer
 ![alt text](./Assets/QuizPart3.png)
 ![alt text](./Assets/QuizPart4.png)
 
+## Starting the Game
 ### Starting the Quiz
 To start the quiz you must click the start quiz button.
 
