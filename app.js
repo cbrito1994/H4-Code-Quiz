@@ -39,3 +39,17 @@ for(let i = 0; i < allOptions.length; i++){
         div.setAttribute("data-answer", false);
     }
 }
+
+htmlOptions.addEventListener("click", (e)=>{
+    let index = QandA.findIndex(qa => qa.question === question);
+    if(e.target.matches(".quiz-option")){
+        if(e.target.innerHTML === correct){
+            htmlAnswer.innerText = "Correct!";
+            secondsLeft += 10;
+        } else {
+            htmlAnswer.innerText = "Wrong!";
+            secondsLeft -= 10;
+        }
+        nextQuestion(index);
+    }
+})
