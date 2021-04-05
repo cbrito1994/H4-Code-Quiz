@@ -25,3 +25,7 @@ buttonClear.addEventListener('click', () => {
     scoresContainer.innerHTML = "";
     localStorage.removeItem("scores");
 })
+
+const goBack = () => {
+    window.location.href = "index.html";
+}
