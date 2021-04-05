@@ -26,3 +26,16 @@ const startQuiz = () => {
         }
     }, 1000);
 }
+
+for(let i = 0; i < allOptions.length; i++){
+    let sortedOptions = allOptions[i];
+    let div = document.createElement("div");
+    div.setAttribute("class", "quiz-option")
+    div.innerHTML = sortedOptions;
+    htmlOptions.appendChild(div);
+    if(allOptions[i] === correct){
+        div.setAttribute("data-answer", true);
+    } else {
+        div.setAttribute("data-answer", false);
+    }
+}
