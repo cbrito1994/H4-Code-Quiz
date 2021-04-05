@@ -14,3 +14,15 @@ let question = questionSet.question;
 let allOptions = questionSet.options.allOptions;
 let correct = questionSet.options.correctOption;
 htmlQuestion.innerHTML = question;
+
+const startQuiz = () => {
+    codingContainer.style.display = "none";
+    codingQuestions.style.display = "flex";
+    let timerInterval = setInterval(() => {
+        secondsLeft--;
+        timeLeft.innerHTML = `You have ${secondsLeft} seconds left`;
+        if(QandA.length === 0) {
+            clearInterval(timerInterval);
+        }
+    }, 1000);
+}
