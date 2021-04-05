@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.coding-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.coding-container p {
+    margin: 10px;
+}
+
+.coding-container button {
+    border-radius: 50px;
+    background-color: orangered;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.coding-container button:hover {
+    background-color: orange;
+}
+
+.coding-questions {
+    display: none;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50vh;
+}
+
+.coding-options {
+    margin-top: 20px;
+}
+
+.submit-score {
+    display: none;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.quiz-option {
+    width: fit-content;
+    padding: 8px 12px;
+    border: 1px solid orangered;
+    background-color: orangered;
+    border-radius: 50px;
+    margin: 10px 0px;
+}
+
+.quiz-option:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.submit-score {
+    display: none;
+    align-items: flex-start;
+}
+
+.submit-score > div {
+    padding: 16px 0px;
+}
+
+.submit-score form {
+    display: flex;
+}
+
+.submit-score form input {
+    margin: 0px 14px;
+}
