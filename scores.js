@@ -20,3 +20,8 @@ if(scoresData !== null){
         scoresContainer.appendChild(div);
     });
 }
+
+buttonClear.addEventListener('click', () => {
+    scoresContainer.innerHTML = "";
+    localStorage.removeItem("scores");
+})
