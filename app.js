@@ -73,3 +73,15 @@ const nextQuestion = (index) => {
         submitScore.style.display = "flex";
     }
 }
+
+submitForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let scoreHistory = JSON.parse(localStorage.getItem("scores")) || [];
+    let initialsScore = {
+        initials: e.target[0].value,
+        score: secondsLeft
+    };
+    scoreHistory.push(initialsScore);
+    localStorage.setItem("scores", JSON.stringify(scoreHistory));
+    window.location.href = "scores.html";
+})
